@@ -1,0 +1,17 @@
+Project 2_Basic algorithms Problem 2_explanation
+
+To achieve the goal that the expected time complexity is O(log(n)), we consider using binary search.
+The only thing that is different from a regular binary search (from the coursework) is that we here must add new structures, or conditions, given that the list is rotated.
+The problem is like this: 
+Given a list [6, 7, 8, 9, 10, 1, 2, 3, 4], and the target is 1, find the index that matches the target.
+Using a normal binary search, we first cut the list into [6, 7, 8, 9, 10] and [1, 2, 3, 4]
+Then we search the left list, however, the left list is greater than the right search, which will result in error.
+To solve this issue, we need extra structures to ensure that the next recrusion happens in the right place, e.g., for target 1, we should search the right-handed side list instead of the left one.
+Thus, we use a simple if statement to check if the target is indeed in the left list [6, 7, 8, 9, 10], meaning it must be larger than the first element of the left list, which in this case is 6. The reason why we only check the first element is because the list is still ordered, which defines the new upper bound of an ordered list.
+In order for achieving this, an "if target >= array[start_index]" is needed.
+OK, that is the logic of this slightly updated version of a regular binary search algorithm.
+
+Efficiency:
+The time efficiency is O(log(n)), since when we are using recursion, we cut the array into half using the mid_index (line 35), and the algorithm is an adapted version of binary search, the time complexity of which is O(log(n)).
+The space efficiency is O(n), since we are constantly replacing a fixed number of variables during each recursion (mid_index, mid_element), which requires additional space during each iteration, making the space efficiency = O(n).
+    

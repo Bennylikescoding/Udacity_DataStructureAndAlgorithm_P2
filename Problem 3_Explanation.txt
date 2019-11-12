@@ -1,0 +1,18 @@
+Project 2_Basic algorithms Problem 3_explanation
+
+By examing the examples, e.g., [1, 2, 3, 4, 5] to [531, 42], and [2, 4, 5, 6, 8, 9] to [964, 852],we come up with the following ideas:
+1. Sort the list in ascending order, using MergeSort (time complexity is O(n * log(n)))
+Since now the new list is sorted, the problem actually converted into this:
+the index of left list is just the even index of the original list, but instead in a descending order.
+for example, [5,3,1] is 5(index = 4), 3(index = 2), 1(index = 0)
+So is the case with the right list (the odd index). for example, [4,2] is 4(index = 3), 2(index = 1)
+Thus, based on this observation, we do the following:
+2. Create two lists, i.e., left and right, to hold the values.
+2.1 Iterate through the list in a descending order, put each number into the left and right lists, respectively and successively. (time complexity is O(n))
+2.2 Return the lists and convert them into concatenated strings, and then wrap them in a list
+
+
+Efficiency:
+The time efficiency is O(nlog(n)), since we are using MergeSort, and a while loop (line 64) has a time complexity of O(n), thus the overall efficiency is O(nlog(n)) + O(n) = O(nlog(n)).
+The space efficiency for MergeSort is O(n + log(n)) = O(n), since we are creating new arrays, also see ref: https://stackoverflow.com/questions/10342890/merge-sort-time-and-space-complexity
+

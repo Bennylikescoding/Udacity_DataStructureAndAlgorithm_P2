@@ -1,0 +1,9 @@
+Project 2_Basic algorithms Problem 5_explanation
+
+The problem is based on the trie implementation, with several modifications. For the implementation of suffixes(), we iterate through the items of all node children, we extend our list with every char we met in each recursion until we finally reach the base case, when the is_word attribute is True, then we return all past histories on the character we’ve iterated.
+
+
+Efficiency:
+The time efficiency is O(n), since for each word, every character of that word must be iterated through.
+The space efficiency is O(i*j), i is for the number of words, and j is for the number of characters of the words with longest word length.
+

@@ -1,0 +1,12 @@
+Project 2_Basic algorithms Problem 6_explanation
+
+To start with, we create two variables, min and max, that is equal to the length of the ints list, and to dynamically track the numbers when traversing
+During iteration, if a number is greater than the original max, then update max with that value.
+If a number is smaller than the original min, then update min with that value
+In this case, the complexity would be O(n), in a single traverse.
+
+
+Efficiency:
+The time efficiency is O(n), since we have to iterate through the whole list in the worst case.
+The space efficiency is O(1), since we are updating the values of two variables during each iteration, the spaces for holding these two variables are independent of the inputs.
+

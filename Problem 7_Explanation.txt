@@ -1,0 +1,9 @@
+Project 2_Basic algorithms Problem 7_explanation
+
+The problem is an updated version of the trie implementation, just changing the "character" of a word into "word" of a path seqarated by "/". Basically, "/home/project/problem" is similar to "w o r d" in the previous version. So we will still use basic trie implementation here, with several modifications according to the instructor's notes, i.e., to add a handler function, to remove the "is_word" or "wordsEnd" function.
+
+
+Efficiency:
+The time efficiency is O(n). Separately, the time efficiency is O(n) from line 16 to 20, O(n) from line 26 to 30 and O(n) from line 69 to 73 (the split function).
+Similar to the previous trie problem, The space efficiency is O(i*j), i is for the number of words, and j is for the number of characters of the words with longest word length.
+
